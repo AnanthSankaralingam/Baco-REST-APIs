@@ -1,0 +1,54 @@
+<h1>
+    Orders
+    <style>
+        table {
+        border-collapse: separate;
+        border-spacing: 0 30px;
+      }
+      th {
+        background-color: #4287f5;
+        color: white;
+      }
+      th,
+      td {
+        width: 150px;
+        text-align: center;
+        border: 1px solid black;
+        padding: 5px;
+      }
+    
+    </style>
+</h1>
+
+<table>
+    <tr>
+        <th>ID    </th>
+        <th>Type</th>
+        <th>Name</th>
+        <th>When</th>
+        <th>Noti</th>
+        <th>Courier</th>
+    </tr>
+    {{#each data}}
+    <tr>
+        <td>{{this.order_id}} </td>
+        <td>{{this.type}}</td>
+        <td>{{this.order_name}}</td>
+        <td>{{this.created_datetime}}</td>
+        <td>{{this.is_client_notification_}}</td>
+        <td>{{this.courier}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+
+<form action="/orders/edit">
+    <p>
+        <button type="submit"  class="btn btn-primary btn-large">Update Order?</button> 
+    </p>
+</form>
+<form action="/orders/add">
+    <p>
+        <button type="submit"  class="btn btn-primary btn-large">Add Order?</button> 
+    </p>
+</form>

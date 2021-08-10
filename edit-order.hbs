@@ -1,0 +1,46 @@
+<h1>
+    Updates
+    <style>
+    
+      p {
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: inherit;
+        border-spacing: 1000px;
+        border-collapse: collapse;
+        width: 150px;
+        text-align: center;
+        border-bottom: 5px;
+        
+        padding: 10px;
+      }
+      label {
+            float: left;
+        }
+        input{
+            display: inline-block;
+        }
+    </style>
+</h1>
+<form action="/orders/edit" method="post">
+    <p>
+        <label> Order ID </label><input value = "" name="order_id" />
+        <label> Type </label><input value = "" name="type" />        
+        <label> Order Name</label><input value = "" name="order_name" />
+        <label> Client Notification</label><input value = "" name="is_client_notification_" />
+        <label> Courier Phone</label><input value = "" name="courier" />
+        <label> Courier Name</label><input value = "" name="courier" />
+        <button type="submit">
+            Update Order</button> 
+    </p>
+</form>
+
+<form action="/orders/info">
+    <p>
+        <button type="submit">View Orders</button> 
+    </p>
+</form>
+<form action="/orders/add">
+    <p>
+        <button type="submit"  class="btn btn-primary btn-large">Add Order?</button> 
+    </p>
+</form>
